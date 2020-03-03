@@ -1,0 +1,38 @@
+{
+  "name": "link-parser",
+  "version": "1.0.0",
+  "description": "simple URL link parser",
+  "main": "server.js",
+  "engines": {
+    "node": "12.13.1"
+  },
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "jest --watchAll",
+    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "author": "Marius Zienius",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
+    "image-size": "^0.8.3",
+    "node-fetch": "^2.6.0",
+    "performance-now": "^2.1.0",
+    "request": "^2.88.2",
+    "request-image-size": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  }
+}

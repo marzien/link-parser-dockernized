@@ -3,7 +3,7 @@ const app = express()
 const path = require("path")
 const PORT = process.env.PORT || 8080
 const ENV = process.env.NODE_ENV || "Development"
-const HOST = "0.0.0.0"
+const HOST = "127.0.0.1"
 
 const CLIENT_BUILD_PATH = path.join(__dirname, "../../client/build")
 

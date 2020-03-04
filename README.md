@@ -10,6 +10,14 @@ For development, the `server/` and `client/` directories have their own docker c
 
 The client server is spun up at `localhost:3000` and it proxies internally to the server using the linked name as `server:8080`.
 
+## Production
+
+```
+docker-compose -f docker-compose.prod.yml up
+```
+
+The application exposed at `localhost:80/`.
+
 ## Limitations
 
 Valid URL format:

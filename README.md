@@ -4,6 +4,12 @@
 docker-compose up
 ```
 
+## Development
+
+For development, the `server/` and `client/` directories have their own docker containers, which are configured via the `docker-compose.yml` file.
+
+The client server is spun up at `localhost:3000` and it proxies internally to the server using the linked name as `server:8080`.
+
 ## Limitations
 
 Valid URL format:

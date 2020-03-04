@@ -3,9 +3,9 @@ const app = express()
 const path = require("path")
 const PORT = process.env.PORT || 8080
 const ENV = process.env.NODE_ENV || "Development"
-const HOST = "127.0.0.1"
+const HOST = "0.0.0.0"
 
-const CLIENT_BUILD_PATH = path.join(__dirname, "../../client/build")
+const CLIENT_BUILD_PATH = path.join(__dirname, "../client/build")
 
 // Serve the static files from the React app
 app.use(express.static(CLIENT_BUILD_PATH))
